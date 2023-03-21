@@ -1,41 +1,41 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+           
+             xmlns:dxco="clr-namespace:DevExpress.Maui.Controls;assembly=DevExpress.Maui.Controls"
              x:Class="MauiAppPushSample.MainPage">
 
-    <ScrollView>
-        <VerticalStackLayout
-            Spacing="25"
-            Padding="30,0"
-            VerticalOptions="Center">
+    <dxco:TabView>
+        <dxco:TabViewItem HeaderText="Mail"
+                          HeaderIcon="email.svg">
+            <dxco:TabViewItem.Content>
+                <Grid>
+                    <Image Source="https://cdn.gellax.com/images/topics/9641f2a7-d781-42e6-808b-1e4789fea1df.png" HeightRequest="100" />
+                </Grid>
+            </dxco:TabViewItem.Content>
+        </dxco:TabViewItem>
 
-            <Image
-                Source="dotnet_bot.png"
-                SemanticProperties.Description="Cute dot net bot waving hi to you!"
-                HeightRequest="200"
-                HorizontalOptions="Center" />
+        <dxco:TabViewItem HeaderText="Calendar"
+                          HeaderIcon="calendar.svg">
+            <dxco:TabViewItem.Content>
+                <Grid>
+                    <Label Text="Calendar Here" 
+                           HorizontalOptions="Center" 
+                           VerticalOptions="CenterAndExpand"/>
+                </Grid>
+            </dxco:TabViewItem.Content>
+        </dxco:TabViewItem>
 
-            <Label
-                Text="Hello, World!"
-                SemanticProperties.HeadingLevel="Level1"
-                FontSize="32"
-                HorizontalOptions="Center" />
-
-            <Label
-                Text="Welcome to .NET Multi-platform App UI"
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
-                FontSize="18"
-                HorizontalOptions="Center" />
-
-            <Button
-                x:Name="CounterBtn"
-                Text="Click me"
-                SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="OnCounterClicked"
-                HorizontalOptions="Center" />
-
-        </VerticalStackLayout>
-    </ScrollView>
+        <dxco:TabViewItem HeaderText="People"
+                          HeaderIcon="people.svg">
+            <dxco:TabViewItem.Content>
+                <Grid>
+                    <Label Text="People Here"
+                           HorizontalOptions="Center" 
+                           VerticalOptions="CenterAndExpand"/>
+                </Grid>
+            </dxco:TabViewItem.Content>
+        </dxco:TabViewItem>
+    </dxco:TabView>
 
 </ContentPage>
